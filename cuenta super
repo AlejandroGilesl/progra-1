@@ -1,0 +1,17 @@
+Proceso Cuentasupermercado
+	definir a,b,c,d,e como entero
+	escribir " Ingrese la cantidad del primer producto";
+	leer a;
+	Escribir "Ingrese la cantidad del segundo producto";
+	leer b;
+	Escribir "Ingrese la cantidad del tercer producto";
+	leer c;
+	Escribir "Ingrese la cantidad del cuarto producto";
+	leer d;
+	Escribir "Ingrese la cantidad del quinto producto";
+	leer e;
+	escribir "su cuenta es de: ";
+	suma= a*5 + b*3 + c*4 + d*7 + e*9;
+	escribir suma;
+	
+FinProceso
