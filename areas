@@ -1,0 +1,44 @@
+// areas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define pi 3.1416
+using namespace std;
+void main ()
+{
+	int opcion;
+	float a,l,r,b,h;
+	cout<<"ingrese el valor del lado(si no tiene lado coloque 0): ";
+	cin>>l;
+	cout<<"ingrese el valor del radio(si no tiene radio coloque 0): ";
+	cin>>r;
+	cout<<"ingrese el valor de la base(si no tiene base coloque 0): ";
+	cin>>b;
+	cout<<"ingrese el valor de la altura (si no tiene altura coloque 0): ";
+	cin>>h;
+	do {
+	  cout<<"Menu"<<endl;
+	  cout<<"1. Cuadrado"<<endl;
+	  cout<<"2. Circulo"<<endl;
+	  cout<<"3. triangulo"<<endl;
+	  cout<<"0. Salir"<<endl;
+	  cout<<"ingrese la opcion: ";
+	  cin>>opcion;
+	  switch (opcion) 
+	  {
+	   case 1: a=l*l;break;
+	   case 2: a=pi*r*r;break;
+	   case 3: a=(b*h)/2;break;
+	   case 0: cout<<"salir";break;
+	   default: cout<<"opcion invalida"<<endl;
+	  }
+	  if(opcion!=0)
+	  cout<<" El resultado del area de la figura es: "<<a<<endl;
+	  else(opcion=0);
+	}while (opcion !=0);
+
+
+getch();
+}
