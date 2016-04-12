@@ -1,0 +1,21 @@
+// factorial y validacion.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	int producto,i,n;
+	producto=1;
+	do
+	{
+		cout<<"ingrese el numero de enteros que quiera saber su resultado: ";
+		cin>>n;
+	}while(n<=0);
+	for (i=1;i<=n;i++)
+		producto=producto*i;
+	cout<<"el resultado del numero entero que ingreso es: "<<producto<<endl;
+	getch ();
+}
