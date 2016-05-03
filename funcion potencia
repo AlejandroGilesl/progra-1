@@ -1,0 +1,28 @@
+// funciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float POTEN (float x,float y);
+int main ()
+{
+	float x,y,z;
+	cout<<"ingrese el numero que sera la base: ";
+	cin>>x;
+	cout<<"ingrese el numero que sera potencia: ";
+	cin>>y;
+	z=POTEN (x,y);
+	cout<<"el resultado de la operacion es: "<<z<<endl;
+getch ();
+return 0;
+}
+float POTEN (float x,float y)
+{
+	float s;
+	s=1;
+	for (int i=1;i<=y;i++)
+	s=s*x;
+	return s;
+}
