@@ -1,0 +1,37 @@
+// funciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float valor_ganado (float n,float c);
+int main ()
+{
+	float s,costo,cod,numero,valor;
+	s=0;
+	cout<<"ingrese el codigo del trabajador: ";
+	cin>>cod;
+	while (cod!=-999)
+	{
+		cout<<"ingrese el numero de horas: ";
+	    cin>>numero;
+	    cout<<"ingrese el costo por hora: ";
+	    cin>>costo;
+	    valor= valor_ganado (numero,costo);
+	    cout<<"el valor ganado de un trabajador es: "<<valor<<endl;
+		s=s+valor;
+		cout<<"-----------------------------------------------------------------"<<endl;
+		cout<<"ingrese el nuevo codigo del trabajador o digite -999 para terminar: ";
+		cin>>cod;
+	}
+    cout<<"el valor ganado de todos los trabajadores es: "<<s<<endl;
+getch ();
+return 0;
+}
+float valor_ganado (float n,float c)
+{
+	float s;
+	s= n*c;
+	return s;
+}
