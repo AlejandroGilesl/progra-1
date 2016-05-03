@@ -1,0 +1,27 @@
+// funciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define Pi 3.141516
+using namespace std;
+float volumen_cilindro (float r, float a);
+int main ()
+{
+	float radio,altura,volumen;
+	cout<<"ingrese el radio: ";
+	cin>>radio;
+	cout<<"ingrese la altura: ";
+	cin>>altura;
+	volumen=volumen_cilindro(radio,altura);
+	cout<<"el volumen del cilindro es: "<<volumen<<endl;
+getch ();
+return 0;
+}
+float volumen_cilindro (float r, float a)
+{
+	float v;
+	v= Pi * r * r * a;
+	return v;
+}
