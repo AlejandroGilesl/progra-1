@@ -1,0 +1,84 @@
+// menu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <stdlib.h>
+#include "windows.h"
+#include "conio.h"
+using namespace std;
+float area_cuadrado (float l);
+void potencia (float x,int y, float &z);
+int MCD (int a, int b);
+void main ()
+{
+	int opcion,a,X,b,y,R3;
+	float l,x,z,R1,R2;
+	system ("color 4A");
+	do
+	  {
+		  cout<<"-------MENU------"<<endl;
+		  cout<<"                     "<<endl;
+		  cout<<"1. Area del cuadrado"<<endl;
+		  cout<<"2. Calcular la potencia"<<endl;
+		  cout<<"3. MCD"<<endl;
+		  cout<<"0. Salir"<<endl;
+		  cout<<"ingrese la opcion: ";
+		  cin>>opcion;
+		  switch (opcion)
+		  {
+		  case 1: {
+			      cout<<"ingrese el lado: ";
+			      cin>>l;
+				  R1=area_cuadrado(l);
+				  cout<<"el area del cuadrado es: "<<R1<<endl;
+				  break;
+				  }
+		  case 2: {
+			      cout<<"ingrese un numero: ";
+			      cin>>x;
+				  cout<<"ingrese un exponente: ";
+				  cin>>y;
+				  potencia (x,y,R2);
+				  cout<<" El resultado de la potencia es: "<<R2<<endl;
+				  break;
+				  }
+		  case 3: {
+			      cout<<"ingrese un numero: ";
+				  cin>>a;
+				  cout<<"ingrese un segundo numero: ";
+				  cin>>b;
+				  R3= MCD(a,b);
+				  cout<<" el MCD de los numeros es: "<<R3<<endl;
+				  break;
+				  }
+		  case 0: {
+			      cout<<"Salir."<<endl;
+				  break;
+				  }
+		  default:{
+			      cout<<"opcion invalida, digite otro numero "<<endl;
+				  break;
+				  }
+		  } getch ();
+		  system ("cls");
+	  }while(opcion !=0);
+getch ();
+}
+int MCD (int a, int b)
+{
+	if (a>b) swap (a,b);
+	return (b==0)? a:MCD (a,a%b);
+}
+float area_cuadrado (float l)
+{
+	float R1;
+	R1=l*l;
+	return (R1);
+}
+void potencia (float x,int y, float &z)
+{
+	z=1;
+		for( int i=1;i<=y; i++)
+		z=z*x;
+}
