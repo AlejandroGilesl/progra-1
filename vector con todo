@@ -30,8 +30,8 @@ void main ()
 	else
 		cout<<"el elemento esta en la posicion: "<<pos<<endl;
 	cout<<"el vector ubicado ascendentemente es: "<<endl;
-	mostrar (vec,n);
 	Burbuja (vec,n);
+	mostrar (vec,n);
 	prom=promedio (vec,n);
 	cout<<"el promedio es: "<<prom<<endl;
 	getch ();
