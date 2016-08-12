@@ -1,0 +1,92 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int divisor (int nro);
+int sumatoria (int nro);
+void main ()
+{
+	int nro,opc,dig,s;
+	do
+	{
+	cout<<"-----------------MENU------------------"<<endl;
+	cout<<"1) Contar digitos de un numero"<<endl;
+	cout<<"2) Sumar los digitos de un numero"<<endl;
+	cout<<"3) Salir del programa"<<endl;
+	cout<<"Ingrese la opcion: ";
+	cin>>opc;
+	switch (opc)
+	{
+	case 1:
+		{
+			do
+		{
+			cout<<"ingrese un numero: ";
+			cin>>nro;
+			if (nro<1)
+			{
+			cout<<"el numero que ha ingresado es menor a 1, porfavor digite un numero mayor a 1"<<endl<<endl;
+		
+			}
+		
+		} while (nro<1);
+		dig = divisor (nro);
+		cout<<"la cantidad de digitos es:  "<<dig<<endl;
+		break;
+		}
+	case 2:
+		{
+				do
+				{
+				cout<<"ingrese un numero: ";
+				cin>>nro;
+					if (nro<1)
+					{
+					cout<<"el numero que ha ingresado es menor a 1, porfavor digite un numero mayor a 1"<<endl<<endl;
+		
+					}
+		
+				} while (nro<1);
+			s   = sumatoria (nro);
+			cout<<"la suma de los digitos es:  "<<s<<endl;
+			break;
+		}
+	case 3:
+		{
+			cout<<"Saliendo...";
+			break;
+		}
+
+	default:
+		{
+		cout<<"Error... Opcion invalida (Digite 1 o 2 o 3)";
+		break;
+		}
+	}
+	} while (opc!=0);
+getch();
+}
+		
+	
+int divisor (int nro)
+{
+	int b=0;
+	while (nro>0)
+	{
+		nro= nro/10;
+		b++;
+	}
+	
+	return (b);
+}
+int sumatoria (int nro)
+{
+	int b,c=0;
+	do
+	{
+		b=nro%10;
+		nro=nro/10;
+		c=c+b;
+	}while(nro>0);
+	return c;
+}
+		
